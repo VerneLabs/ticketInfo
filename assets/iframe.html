@@ -5,8 +5,40 @@
   <link rel="stylesheet" href="https://assets.zendesk.com/apps/sdk-assets/css/2/zendesk_garden.css" type="text/css">
 </head>
 <body>
-  <h2 class="u-gamma">Hello, World!</h2>
+  <div id="content"></div>
+
+  <script id="requester-template" type="text/x-handlebars-template">
+    <table>
+    <tr>
+      <td>Nombre:</td>
+      <td>{{name}}</td>
+    </tr>
+    <tr>
+      <td>Email:</td>
+      <td>{{email}}</td>
+    </tr>
+    <tr>
+      <td>Role:</td>
+      <td>{{role}}</td>
+    </tr>
+    <tr>
+      <td>Time Zone:</td>
+      <td>{{time_zone}}</td>
+    </tr>
+    <tr>
+      <td>Created At:</td>
+      <td>{{created_at}}</td>
+    </tr>
+    </table>
+</script>
+
+
   <!-- https://github.com/zendesk/zendesk_app_framework_sdk -->
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/handlebarsjs/4.0.8/handlebars.min.js"></script>
   <script type="text/javascript" src="https://assets.zendesk.com/apps/sdk/2.0/zaf_sdk.js"></script>
   <script type="text/javascript" src="./main.js"></script>
   <script>
